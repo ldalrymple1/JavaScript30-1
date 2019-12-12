@@ -31,5 +31,6 @@ I remember when I first learnt array methods I found them really tricky but the 
 Visually this looked great. Would have preferred to do more JavaScript in this one but at least I learnt some more CSS tricks. 
 
 ## Day 6 - Type Ahead
+Felt weird going back to fetch having used axios for so long. It was also good to go over JavaScript's use of promises. This challenge was especially useful given that I have recently been given a code test where the user has to highlight text and store it somewhere so this has given me some more ideas 🤠.
 
 
