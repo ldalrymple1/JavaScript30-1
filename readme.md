@@ -30,4 +30,6 @@ I remember when I first learnt array methods I found them really tricky but the 
 ## Day 5 - Flex Panel Gallery
 Visually this looked great. Would have preferred to do more JavaScript in this one but at least I learnt some more CSS tricks. 
 
+## Day 6 - Type Ahead
+
 

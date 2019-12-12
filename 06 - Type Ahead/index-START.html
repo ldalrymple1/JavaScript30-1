@@ -15,7 +15,68 @@
     </ul>
   </form>
 <script>
-const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+  const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+  // fetch(endpoint, function(data) {
+
+  // })
+  // fetch returns a promise 
+  //Something will eventually come back...call .then
+  // The res needs to be translated into JSON
+
+  // fetch(endpoint)
+  //   .then(res => res.json())
+  //   .then(data => cities.push(...data))
+
+
+  // function findMatch(wordToMatch, cities) {
+  //   return cities.filter(elem => {
+  //     const regex = new RegExp(wordToMatch, 'gi')
+  //     return elem.city.match(regex) || elem.state.match(regex)
+  //   })
+  // }
+
+
+ const cities = [];
+ fetch(endpoint)
+   .then(blob => blob.json())
+   .then(data => cities.push(...data))
+
+ function findMatches(wordToMatch, cities) {
+    return cities.filter(place => {
+     // here we need to figure out if the city or state matches what was searched
+     const regex = new RegExp(wordToMatch, 'gi');
+     return place.city.match(regex) || place.state.match(regex)
+   });
+  }
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function displayMatches(){
+    console.log(this.value) // what someone types
+    const matchArray = findMatches(this.value, cities)
+    const html = matchArray.map(elem => {
+      const regex = new RegExp(this.value, 'gi') // g = globally and i = insensitively
+      const cityName = elem.city.replace(regex, `<span class="hl">${this.value}</span>`)
+      const stateName = elem.state.replace(regex, `<span class="hl">${this.value}</span>`)
+
+     return `
+        <li>
+          <span class="name">${cityName}, ${stateName}</span>
+          <span class="population">${numberWithCommas(elem.population)}</span>
+        </li>
+      `
+    }).join('') // map returns an array so we watn to make the result a string
+    suggestions.innerHTML = html
+  }
+
+  const searchBar = document.querySelector('.search')
+  const suggestions = document.querySelector('.suggestions')
+
+  searchBar.addEventListener('change', displayMatches)
+  searchBar.addEventListener('keyup', displayMatches)
+
 
 </script>
 </body>
