@@ -19,7 +19,7 @@ Below is my #JavaScript30 blog and please look at my GitHub for my completed sol
 Although this was going over the basics I really enjoyed making it. Also ahvign worked in React for the majority of the course at GA, it was particularly weird going back to vanilla JS and manipulation of the DOM!
 
 ## Day 2 - JS and CSS Clock
-Nice little exercise.
+Nice little exercise. It was good to go over both dates and animation, something I haven't looked at in a while ⏱. The setInterval and setTimeout functions brought back memories of making my first Vanilla JavaScript game... a Shrek themes Frogger!
 
 ## Day 3 - CSS Variables
 I knew you could create variables in Sass but I didn't know you could in CSS.
