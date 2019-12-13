@@ -33,4 +33,7 @@ Visually this looked great. Would have preferred to do more JavaScript in this o
 ## Day 6 - Type Ahead
 Felt weird going back to fetch having used axios for so long. It was also good to go over JavaScript's use of promises. This challenge was especially useful given that I have recently been given a code test where the user has to highlight text and store it somewhere so this has given me some more ideas 🤠.
 
+## Day 7 - Array Cardio Day 2
+Good to go over even more array methods as we all know how useful they are! I always get confused between splice, slice and split 🥴.
+
 
