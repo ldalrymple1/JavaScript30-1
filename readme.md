@@ -36,4 +36,15 @@ Felt weird going back to fetch having used axios for so long. It was also good t
 ## Day 7 - Array Cardio Day 2
 Good to go over even more array methods as we all know how useful they are! I always get confused between splice, slice and split 🥴.
 
+## Day 8 - HTML5 Canvas
+I had a lot of fun with this task and it was good to do something I had never done before. I was surprised how easy it was to get the colour to change by just adding 
+```
+hue ++ 
+```
+if 
+```
+isDrawing === true
+```
+
+## Day 9
 
