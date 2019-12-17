@@ -46,5 +46,6 @@ if
 isDrawing === true
 ```
 
-### Day 9
+### Day 9 - Dev Tools Domination
+Loved this session - Who ever knew there were so many different forms of the console.log(), a JS developer's best friend!
 
