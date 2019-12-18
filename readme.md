@@ -49,5 +49,8 @@ isDrawing === true
 ### Day 9 - Dev Tools Domination
 Loved this session - Who ever knew there were so many different forms of the console.log(), a JS developer's best friend!
 
+## Day 10 - Hold Shift and Check Checkboxes
+I actually found this much harder than I had anticipated and decided to code it again at the end of the day without looking at the solution.
+
 
 
