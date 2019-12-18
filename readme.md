@@ -8,7 +8,7 @@ Grab the course at [https://JavaScript30.com](https://JavaScript30.com)
 
 # Brief
 
-Having recently completed General Assembly's *Software Engineering Immersive* course I though Wes Bos's JavaScript 30 day challenge would be a good way for me to keep up with my technical skills whilst I am looking for a job. I am also a big fan of Wes Bos and love his podcast **Syntax.fm**!
+Having recently completed General Assembly's *Software Engineering Immersive* course I thought Wes Bos's JavaScript 30 day challenge would be a good way for me to keep up with my technical skills whilst I am looking for a job. I am also a big fan of Wes Bos and love his podcast **Syntax.fm**!
 
 
 Below is my #JavaScript30 blog and please look at my GitHub for my completed solutions.
@@ -48,4 +48,6 @@ isDrawing === true
 
 ### Day 9 - Dev Tools Domination
 Loved this session - Who ever knew there were so many different forms of the console.log(), a JS developer's best friend!
+
+
 
