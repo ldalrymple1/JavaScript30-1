@@ -96,6 +96,53 @@
   </div>
 
 <script>
+
+  let checkboxes = document.querySelectorAll('.inbox input[type=checkbox]')
+  console.log(checkboxes, 'checks')
+
+  let lastClicked 
+
+  function handleCheck(e) {
+    console.log('you have clicked a checkbox')
+    console.log(this, 'this this')
+    console.log(lastClicked, 'last')
+    let inBetween = false
+    if(e.shiftKey && this.checked) {
+      checkboxes.forEach(elem => {
+        console.log(elem)
+        if(elem === this || elem === lastClicked) {
+          inBetween = !inBetween // flag variable
+          //its like a SWITCH so when it hits the first one in between become TRUE and if its hits the other it becomes the OPPOSITE
+          // console.log('checking in between')
+        }
+        if(inBetween) {
+          elem.checked = true  
+        }
+      })
+    }
+    lastClicked = this
+   
+
+  }
+
+  checkboxes.forEach(elem => elem.addEventListener('click', handleCheck))
+
+  // function scoreThrough(e) {
+  //   if 
+  // }
+
+  // each checkbox has an index 
+  // if a checkbox is clicked on CARRY OUT THIS FUNCTION
+
+  // [check, check, check, check, check ]
+
+  // for(let i = 0; i < checkbox.length; i ++) {
+  //   checkbox[i].addEventListener('click', () => {
+      
+  //   })
+
+  
+
 </script>
 </body>
 </html>
