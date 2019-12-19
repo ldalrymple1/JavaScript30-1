@@ -5,7 +5,7 @@ const progress = player.querySelector('.progress')
 const progressBar = player.querySelector('.progress__filled')
 const toggle = player.querySelector('.toggle')
 const skipButton = player.querySelectorAll('[data-skip]')
-const ranges = player.querySelector('.player__slider')
+const ranges = player.querySelectorAll('.player__slider')
 
 // let vidPlaying = false
 
@@ -30,7 +30,19 @@ function skip() {
   video.currentTime += parseFloat(this.dataset.skip)
 }
 
-functio
+function handleRange() {
+  video[this.name] = this.value
+}
+
+function handleProgress() {
+  const percentage = (video.currentTime / video.duration) * 100
+  progressBar.style.flexBasis = `${percentage}%`
+}
+
+function scrub(e) {
+  const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  video.currentTime = scrubTime;
+}
 
 
 
@@ -39,5 +51,16 @@ functio
 video.addEventListener('click', togglePlay)
 video.addEventListener('play', buttonUpdate)
 video.addEventListener('pause', buttonUpdate)
+video.addEventListener('timeupdate', handleProgress) // triggered when the video is updating its time code
+
 toggle.addEventListener('click', togglePlay)
 skipButton.forEach(elem => elem.addEventListener('click', skip))
+
+let mouseDown = false
+progress.addEventListener('click', scrub)
+progress.addEventListener('mousemove', scrub)
+progress.addEventListener('mousedown', () => mouseDown = true )
+progress.addEventListener('mouseup', () => mouseDown = false )
+
+ranges.forEach(elem => elem.addEventListener('change', handleRange))
+ranges.forEach(elem => elem.addEventListener('mouseover', handleRange))
