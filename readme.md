@@ -50,7 +50,10 @@ isDrawing === true
 Loved this session - Who ever knew there were so many different forms of the console.log(), a JS developer's best friend!
 
 ## Day 10 - Hold Shift and Check Checkboxes
-I actually found this much harder than I had anticipated and decided to code it again at the end of the day without looking at the solution.
+I actually found this much harder than I had anticipated and decided to code it again at the end of the day without looking at the solution. One third of the way through!
+
+## Day 11 - Custom Video Player
+Going over more key concepts and cementing them in my brain. Good to go over progress bars again as they can be quite tricky, but once you've got the hang of them they are fine.
 
 
 
