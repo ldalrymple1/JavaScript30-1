@@ -58,7 +58,7 @@ skipButton.forEach(elem => elem.addEventListener('click', skip))
 
 let mouseDown = false
 progress.addEventListener('click', scrub)
-progress.addEventListener('mousemove', scrub)
+progress.addEventListener('mousemove', (e) => mouseDown && scrub(e)) // will only run scrub if mouseDown is TRUE
 progress.addEventListener('mousedown', () => mouseDown = true )
 progress.addEventListener('mouseup', () => mouseDown = false )
 
