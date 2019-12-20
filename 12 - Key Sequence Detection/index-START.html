@@ -7,6 +7,21 @@
 </head>
 <body>
 <script>
+
+  const pressedKeys = []
+  const secretCode = 'lydia'
+  window.addEventListener('keyup', (e) => {
+    console.log(e.key)
+    pressedKeys.push(e.key)
+    console.log(pressedKeys)
+    pressedKeys.splice(-secretCode.length - 1, pressedKeys.length - secretCode.length)
+    if (pressedKeys.join('').includes(secretCode)) {
+      console.log('ALERT SECRET CODE DETECTED')
+      cornify_add()
+    }
+
+  })
+
 </script>
 </body>
 </html>
