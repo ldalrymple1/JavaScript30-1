@@ -68,7 +68,7 @@ arrayName.slice()
 [].concat(arrayName)
 [...arrayName]
 ```
-
+Similarly with objects you should make a copy otherwise you are making a reference to the original object.
 
 
 
