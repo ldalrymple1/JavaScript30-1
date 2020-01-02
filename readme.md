@@ -61,7 +61,14 @@ Wow, I did not know about the cornify_add() function until now...🦄🦄🦄�
 ## Day 13 - Slide in on Scroll
 Funky little idea that I might use at some point
 
-## Day 14 - 
+## Day 14 - Objects and Arrays Reference VS Copy
+Key Learning -> If you reference an array, it will always update to the original array therefore best to make a copy. There are three ways of doing this:
+```
+arrayName.slice()
+[].concat(arrayName)
+[...arrayName]
+```
+
 
 
 
