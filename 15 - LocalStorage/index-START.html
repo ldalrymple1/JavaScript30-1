@@ -28,8 +28,9 @@
 <script>
   const addItems = document.querySelector('.add-items');
   const itemsList = document.querySelector('.plates');
-  const items = [];
+  const items = JSON.parse(localStorage.getItem('items')) || [];
 
+  // We want to store the data in local storage so that the data data doesnt disappear when we refresh the page
   function addItem(e) {
     console.log('helllooo')
     e.preventDefault()
@@ -41,6 +42,7 @@
     }
     items.push(item)
     populateList(items, itemsList)
+    JSON.parse(localStorage.setItem('item', JSON.stringify(items)))
     console.log(item)
     console.log(items)
     this.reset()
@@ -58,8 +60,9 @@
     }).join('')
   }
   
+  populateList(items, itemsList)
   addItems.addEventListener('submit', addItem)
-  plates
+  
 
 </script>
 
