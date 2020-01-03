@@ -58,7 +58,7 @@ h2 {
 .plates input {
   display: none;
 }
-
+ /* To style the checkbox */
 .plates input + label:before {
   content: '⬜️';
   margin-right: 10px;
