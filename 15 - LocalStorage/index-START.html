@@ -30,6 +30,7 @@
   const itemsList = document.querySelector('.plates');
   const items = JSON.parse(localStorage.getItem('items')) || [];
 
+
   // We want to store the data in local storage so that the data data doesnt disappear when we refresh the page
   function addItem(e) {
     console.log('helllooo')
@@ -42,7 +43,7 @@
     }
     items.push(item)
     populateList(items, itemsList)
-    JSON.parse(localStorage.setItem('item', JSON.stringify(items)))
+    JSON.parse(localStorage.setItem('items', JSON.stringify(items)))
     console.log(item)
     console.log(items)
     this.reset()
@@ -59,9 +60,22 @@
       `
     }).join('')
   }
+
+  function toggle(e) {
+    if(!e.target.matches('input')) return //skip if it doesn't match input 
+    console.log(e.target, 'ch ch changes')
+    const element = e.target
+    const index = element.dataset.index
+    items[index].done = !items[index].done //setting it to the opposite 
+    JSON.parse(localStorage.setItem('items', JSON.stringify(items)))
+    populateList(items, itemsList) // updates the visability part again
+  }
   
-  populateList(items, itemsList)
   addItems.addEventListener('submit', addItem)
+  itemsList.addEventListener('click', toggle)
+
+  populateList(items, itemsList)
+
   
 
 </script>

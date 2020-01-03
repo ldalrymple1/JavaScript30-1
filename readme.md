@@ -70,5 +70,6 @@ arrayName.slice()
 ```
 Similarly with objects you should make a copy otherwise you are making a reference to the original object.
 
-
+## Day 15 - LocalStorage
+Halfway there! Good to go over my understanding of local storage and just keep going over more key concepts of vanilla javascript.
 
