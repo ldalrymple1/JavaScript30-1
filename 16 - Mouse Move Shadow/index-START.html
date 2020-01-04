@@ -7,7 +7,7 @@
 <body>
 
   <div class="hero">
-    <h1 contenteditable>🔥WOAH!</h1>
+    <h1 contenteditable> 🐙LYDIA! 🥑</h1>
   </div>
 
   <style>
@@ -35,6 +35,37 @@
   </style>
 
 <script>
+  const hero = document.querySelector('.hero')
+  const text = hero.querySelector('h1')
+  const walk = 100 // px
+
+  function shadow(e) {
+    console.log(e)
+    // const width = hero.offsetWidth
+    // const height = hero.offsetHeight
+
+    // ES6 destructuring means that you can write it like this instead
+    const { offsetWidth: width , offsetHeight: height } =  hero
+    let { offsetX: x, offsetY: y } = e // get the position where your cursor is
+    // console.log(x, y)
+
+    console.log(this, e.target)
+    // if these two things are not the same then ...
+    if (this !== e.target) {
+      x = x + e.target.offsetLeft
+      y = y + e.target.offsetTop
+    }
+
+    const xWalk = Math.round((x / width * walk) - (walk / 2))
+    const yWalk = Math.round((y / height * walk) - (walk / 2))
+
+    text.style.textShadow = `${xWalk}px ${yWalk}px 0 green`
+  }
+
+  hero.addEventListener('mousemove', shadow)
+
+
+
 </script>
 </body>
 </html>
