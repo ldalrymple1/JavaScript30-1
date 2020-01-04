@@ -73,3 +73,6 @@ Similarly with objects you should make a copy otherwise you are making a referen
 ## Day 15 - LocalStorage
 Halfway there! Good to go over my understanding of local storage and just keep going over more key concepts of vanilla javascript.
 
+## Day 16 - Mouse Move Shadow
+Cool CSS and something I will definitely be using in future projects.
+
