@@ -48,15 +48,40 @@
 <script>
 const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
-let alpha = bands.sort()
-console.log(alpha.map(elem => "The".includes(elem) ? elem.replace('') : elem.replace('false') ), 'tetsing')
-console.table(alpha)
+let alphaOrig = bands.sort()
 
-alpha.filter((elem, i) => {
-  if (elem.startsWith('The') || elem.startsWith('An') || elem.startsWith('A')) {
-    console.log(i)
-  } 
-  })
+// map -> elem.split at the spaces -> if elem starts with 'the an or a', sort by [2nd index]
+
+const alpha2 = bands.map((elem, i) => {
+  return elem.split(' ')
+  
+  // if ("The".includes(elem)) {
+  //   console.log('the')
+  // }
+})
+console.table(alpha2)
+
+const alpha3 = alpha2.map((elem, i) => {
+  console.log(elem, 'elem')
+  if(elem[0] === 'The' || elem[0] === 'An' || elem[0] === 'A') {
+    elem.splice(0, 1)
+    return elem.join(' ')
+  } else {
+    return elem.join(' ')
+  }
+  console.log(elem, 'elem 2')
+})
+
+const alpha4 = alpha3.sort()
+
+console.table(alpha4)
+console.table(alphaOrig)
+
+// alpha.filter((elem, i) => {
+//   if (elem.startsWith('The') || elem.startsWith('An') || elem.startsWith('A')) {
+//     console.log(i)
+//   } 
+// })
 
 
 
