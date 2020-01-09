@@ -79,3 +79,10 @@ Cool CSS and something I will definitely be using in future projects.
 ## Day 17 - Sort Without Articles
 I never complain when it comes to going over array methods 😅. Originally I coded it in a lot more lines but then I refactored it to one line.
 
+## Day 18 - Adding Up Times with Reduce
+I find time quite tricky in JavaScript 🥴, why does it have to work in miliseconds!! I also found it helpful to point out and go over over more ES6 features.
+```
+      const [mins, secs] = timeCode.split(':').map(parseFloat);
+```
+
+
