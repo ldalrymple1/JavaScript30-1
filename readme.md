@@ -77,5 +77,5 @@ Halfway there! Good to go over my understanding of local storage and just keep g
 Cool CSS and something I will definitely be using in future projects.
 
 ## Day 17 - Sort Without Articles
-I never complain when it comes to going over array methods. Originally I coded it in a lot more lines but then I refactored it to one line.
+I never complain when it comes to going over array methods 😅. Originally I coded it in a lot more lines but then I refactored it to one line.
 

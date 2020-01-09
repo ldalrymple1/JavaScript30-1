@@ -182,6 +182,52 @@
     </li>
   </ul>
 <script>
+
+  const Nodes = document.querySelectorAll('[data-time]')
+  const array = [...Nodes] // ES6 spread method turns the Node List into an array
+
+  // const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
+
+
+  const seconds = array
+    .map(node => node.dataset.time)
+    .map(timeCode => {
+      const [mins, secs] = timeCode.split(':').map(parseFloat);
+      return (mins * 60) + secs;
+      console.log(mins, secs)
+    })
+    .reduce((total, seconds) => total + seconds)
+    let secondsLeft = seconds;
+    const hours = Math.floor(secondsLeft / 3600)
+    secondsLeft = secondsLeft % 3600
+
+    const mins = Math.floor(secondsLeft / 60)
+    secondsLeft = secondsLeft % 60
+
+    console.log(hours, mins, secondsLeft)
+
+
+  // const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
+
+  // const seconds = timeNodes
+  //   .map(node => node.dataset.time)
+  //   .map(timeCode => {
+  //     const [mins, secs] = timeCode.split(':').map(parseFloat);
+  //     // return (mins * 60) + secs;
+  //     console.log(mins, secs)
+  //   })
+
+ 
+    
+
+  
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
